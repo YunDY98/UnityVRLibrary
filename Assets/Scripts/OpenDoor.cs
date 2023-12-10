@@ -38,7 +38,7 @@ public class OpenDoor : MonoBehaviour
             .SetEase(Ease.OutCubic) // 이징 함수 설정
             .OnComplete(() =>
             {
-                targetPosition.position = destinationPosition.position;
+               // targetPosition.position = destinationPosition.position;
                 // 3초 후에 문이 닫히는 애니메이션
                 transform.DORotate(initialRotation.eulerAngles, 7f)
                     .SetEase(Ease.InCubic);

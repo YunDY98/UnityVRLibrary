@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LibraryDemo.unity
     guid: 8f03467f81ea54b49badd0b0d77a2947
   - enabled: 0
@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/AssetFolder/AZURE Nature/Demo/AN_Demo.unity
     guid: 383aeff0143f15b48a904c9837dacc3e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ForestDemo.unity
     guid: 22dfaa341d32d47fd99d809adfb1a89b
+  - enabled: 0
+    path: Assets/Scenes/DeepSea.unity
+    guid: 37e0d42996f11451c975aba5fa42d8b3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}
