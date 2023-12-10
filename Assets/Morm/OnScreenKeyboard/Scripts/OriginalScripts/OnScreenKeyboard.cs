@@ -4,6 +4,7 @@ using System.Text;
 using HangulVirtualKeynoard;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class OnScreenKeyboard : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class OnScreenKeyboard : MonoBehaviour
         Caps,
         Uncaps
     }
+    public TextMeshProUGUI textMeshProComponent;
 
     private OnScreenKeyboardInputfield currentOskInputfield;
     private InputField targetInputField;
@@ -41,8 +43,11 @@ public class OnScreenKeyboard : MonoBehaviour
     public Material newMaterial;
 
     private bool timeCheck;
+    private bool searchtimeCheck;
 
     private float timer;
+
+    
     private Renderer objectRendererOrigin;
     private Material tmpMaterial;
 
@@ -59,7 +64,9 @@ public class OnScreenKeyboard : MonoBehaviour
         curCaps = Caps.Uncaps;
         ClearAllStrValue();
         CloseKeyboard();
+       textMeshProComponent.gameObject.SetActive(false);
     }
+   
 
     private void Update()
     {
@@ -81,6 +88,16 @@ public class OnScreenKeyboard : MonoBehaviour
         {
             beforeCaps = curCaps;
             ChangeKeyboardType(curLang, curCaps);
+        }
+        if(searchtimeCheck)
+        {
+            timer += Time.deltaTime;
+            if(timer > 3)
+            {
+               searchtimeCheck = false;
+               textMeshProComponent.gameObject.SetActive(false);
+               timer = 0;
+            }
         }
 
         if(timeCheck)
@@ -377,6 +394,11 @@ public class OnScreenKeyboard : MonoBehaviour
         else
         {
             Debug.LogError("지정된 이름의 객체를 찾을 수 없습니다.");
+           
+            textMeshProComponent.gameObject.SetActive(true);
+            searchtimeCheck = true;
+            
+
         }
 
 

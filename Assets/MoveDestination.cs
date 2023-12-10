@@ -42,15 +42,15 @@ public class MoveDestination : MonoBehaviour
 
     }
 
-    void OnTriggerStay(Collider other)
-    {
-        MoveToPosition();
-    }
+    // void OnTriggerStay(Collider other)
+    // {
+    //     MoveToPosition();
+    // }
 
-    void OnTriggerExit(Collider other)
-    {
-        MoveToPosition();
-    }
+    // void OnTriggerExit(Collider other)
+    // {
+    //     MoveToPosition();
+    // }
 
     public void isPushF()
     {
