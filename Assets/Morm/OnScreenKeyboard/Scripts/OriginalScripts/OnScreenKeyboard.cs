@@ -17,6 +17,13 @@ public class OnScreenKeyboard : MonoBehaviour
         Uncaps
     }
     public TextMeshProUGUI textMeshProComponent;
+    //public GameObject Recommend;
+    public TextMeshProUGUI Recommend1;
+    public TextMeshProUGUI Recommend2;
+    public TextMeshProUGUI Recommend3;
+    public TextMeshProUGUI Recommend4;
+    public TextMeshProUGUI Recommend5;
+    
 
     private OnScreenKeyboardInputfield currentOskInputfield;
     private InputField targetInputField;
@@ -356,12 +363,67 @@ public class OnScreenKeyboard : MonoBehaviour
         Debug.Log(str);
         // 객체 찾기
         GameObject targetObject = GameObject.Find(str);
-       
         
+        if(str == "20231")
+        {
+             ClearAllStrValue();
+            Recommend1.gameObject.SetActive(true);
+            Recommend2.gameObject.SetActive(false);
+            Recommend3.gameObject.SetActive(false);
+            Recommend4.gameObject.SetActive(false);
+            Recommend5.gameObject.SetActive(false);
+            
+            return;
+        }
+        else if(str == "20222")
+        { ClearAllStrValue();
+            Recommend1.gameObject.SetActive(false);
+            Recommend2.gameObject.SetActive(true);
+            Recommend3.gameObject.SetActive(false);
+            Recommend4.gameObject.SetActive(false);
+            Recommend5.gameObject.SetActive(false);
+            return;
+        }
+        else if(str == "20221")
+        {
+             ClearAllStrValue();
+            Recommend1.gameObject.SetActive(false);
+            Recommend2.gameObject.SetActive(false);
+            Recommend3.gameObject.SetActive(true);
+            Recommend4.gameObject.SetActive(false);
+            Recommend5.gameObject.SetActive(false);
+            return;
+        }
+        else if(str =="20212")
+        {
+             ClearAllStrValue();
+            Recommend1.gameObject.SetActive(false);
+            Recommend2.gameObject.SetActive(false);
+            Recommend3.gameObject.SetActive(false);
+            Recommend4.gameObject.SetActive(true);
+            Recommend5.gameObject.SetActive(false);
+            return;
+        }
+        else if(str == "20211")
+        {
+             ClearAllStrValue();
+            Recommend1.gameObject.SetActive(false);
+            Recommend2.gameObject.SetActive(false);
+            Recommend3.gameObject.SetActive(false);
+            Recommend4.gameObject.SetActive(false);
+            Recommend5.gameObject.SetActive(true);
+            return;
+        }
+       
+
+            
+        
+            
 
         // 객체가 존재하고 머터리얼이 설정되어 있다면
         if (targetObject != null)
         {
+            
             // 렌더러 컴포넌트 가져오기 (MeshRenderer 또는 SpriteRenderer, 등)
             Renderer objectRenderer = targetObject.GetComponent<Renderer>();
             objectRendererOrigin = targetObject.GetComponent<Renderer>();
