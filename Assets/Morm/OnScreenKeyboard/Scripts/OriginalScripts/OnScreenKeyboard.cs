@@ -427,8 +427,31 @@ public class OnScreenKeyboard : MonoBehaviour
             // 렌더러 컴포넌트 가져오기 (MeshRenderer 또는 SpriteRenderer, 등)
             Renderer objectRenderer = targetObject.GetComponent<Renderer>();
             objectRendererOrigin = targetObject.GetComponent<Renderer>();
-            if (targetObject.CompareTag("Book"))
-            {
+            //   if (targetObject.CompareTag("Book"))
+            // {
+            //     // 렌더러가 존재하면
+            //     if (objectRenderer != null)
+            //     {
+            //         timeCheck = true;
+            //         timer = 0f;
+            //         // 새로운 머터리얼로 변경
+            //         tmpMaterial = objectRenderer.material;
+            //         objectRenderer.material = newMaterial;
+            //         //objectRenderer.material = tmpMaterial;
+
+            //         ClearAllStrValue();
+
+
+
+
+            //     }
+            //     else
+            //     {
+            //         Debug.LogError("Renderer 컴포넌트가 없습니다.");
+            //     }
+
+            // }
+           
                 // 렌더러가 존재하면
                 if (objectRenderer != null)
                 {
@@ -450,7 +473,7 @@ public class OnScreenKeyboard : MonoBehaviour
                     Debug.LogError("Renderer 컴포넌트가 없습니다.");
                 }
 
-            }
+            
             
         }
         else

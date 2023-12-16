@@ -8,6 +8,7 @@ TagManager:
   - Desk
   - Hand
   - Wall
+  - ElonMusk
   layers:
   - Default
   - TransparentFX

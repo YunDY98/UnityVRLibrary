@@ -11,8 +11,8 @@ public class OpenDoor : MonoBehaviour
     public AudioClip soundClip; // Inspector 창에서 할당할 소리 파일
     private AudioSource audioSource;
 
-    public Transform targetPosition;
-    public Transform destinationPosition;
+   // public Transform targetPosition;
+   // public Transform destinationPosition;
 
 
     void Start()

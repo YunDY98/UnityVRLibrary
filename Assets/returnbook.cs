@@ -6,6 +6,7 @@ public class returnbook : MonoBehaviour
 {
   
    public GameObject ElonMusk;
+   public RectTransform ElonrectTransform;
    private float timer;
    bool isTrigger;
 
@@ -20,10 +21,16 @@ public class returnbook : MonoBehaviour
         }
 
    }
+   public void OnTriggerEnter()
+   {
+        
+        ElonrectTransform.localRotation = Quaternion.Euler(new Vector3(0f, -90f, 0f));
+   }
 
    public void OnTriggerStay(Collider other)
    {
-        if(other.CompareTag("Book"))
+
+        if(other.CompareTag("ElonMusk"))
         {
             isTrigger = true;
             if(timer > 3)
