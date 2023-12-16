@@ -7,6 +7,9 @@ public class returnbook : MonoBehaviour
   
    public GameObject ElonMusk;
    public RectTransform ElonrectTransform;
+
+    public GameObject Suzume;
+   public RectTransform SuzumerectTransform;
    private float timer;
    bool isTrigger;
 
@@ -21,10 +24,20 @@ public class returnbook : MonoBehaviour
         }
 
    }
-   public void OnTriggerEnter()
+   public void OnTriggerEnter(Collider other)
    {
-        
-        ElonrectTransform.localRotation = Quaternion.Euler(new Vector3(0f, -90f, 0f));
+        if(other.CompareTag("ElonMusk"))
+        {
+            ElonrectTransform.localRotation = Quaternion.Euler(new Vector3(0f, -90f, 0f));
+        }
+
+        if(other.CompareTag("Suzume"))
+        {
+            SuzumerectTransform.localRotation = Quaternion.Euler(new Vector3(0f, -90f, 0f));
+
+        }
+       
+       
    }
 
    public void OnTriggerStay(Collider other)
@@ -45,6 +58,26 @@ public class returnbook : MonoBehaviour
            
 
         }
+
+         if(other.CompareTag("Suzume"))
+        {
+            isTrigger = true;
+            if(timer > 3)
+            {
+                other.transform.position = Suzume.transform.position;
+                isTrigger = false;
+                timer = 0;
+          
+               
+            }
+           
+           
+
+        }
+
+
+
+        
            
 
    }
