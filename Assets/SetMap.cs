@@ -5,6 +5,7 @@ using UnityEngine;
 public class SetMap : MonoBehaviour
 {
     public GameObject DeepSeaScene;
+    public GameObject ForestScene;
 
     void Start()
     {
@@ -21,5 +22,15 @@ public class SetMap : MonoBehaviour
     public void OffDeepSea()
     {
         DeepSeaScene.SetActive(false);
+    }
+
+     public void OnForest()
+    {
+        ForestScene.SetActive(true);
+    }
+
+    public void OffForest()
+    {
+        ForestScene.SetActive(false);
     }
 }

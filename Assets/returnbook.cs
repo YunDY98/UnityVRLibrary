@@ -4,51 +4,65 @@ using UnityEngine;
 
 public class returnbook : MonoBehaviour
 {
+    public GameObject PachinkoInit;
+    public RectTransform PachinkorectTransform;
+
+    public GameObject DollarInit;
+    public RectTransform DollarrectTransform;
+
+    public GameObject JusticeInit;
+    public RectTransform JusticerectTransform;
+
+
   
-   public GameObject ElonMusk;
-   public RectTransform ElonrectTransform;
+    public GameObject ElonMuskInit;
+    public RectTransform ElonrectTransform;
 
-    public GameObject Suzume;
-   public RectTransform SuzumerectTransform;
-   private float timer;
-   bool isTrigger;
+    public GameObject SuzumeInit;
+    public RectTransform SuzumerectTransform;
+    private float timer;
+    bool isTrigger;
 
-   void Update()
-   {
-        if(isTrigger)
-        {
+    void Update()
+    {
+         if(isTrigger)
+         {
             timer += Time.deltaTime;
-            
-            
-            
-        }
-
-   }
-   public void OnTriggerEnter(Collider other)
-   {
+             
+             
+             
+         }
+ 
+    }
+    
+ 
+    public void OnTriggerStay(Collider other)
+    {
+ 
         if(other.CompareTag("ElonMusk"))
         {
-            ElonrectTransform.localRotation = Quaternion.Euler(new Vector3(0f, -90f, 0f));
+            isTrigger = true;
+
+            if(timer > 3)
+            {
+                other.transform.position = ElonMuskInit.transform.position;
+                isTrigger = false;
+                timer = 0;
+         
+              
+           }
+           
+           
+
         }
 
         if(other.CompareTag("Suzume"))
         {
-            SuzumerectTransform.localRotation = Quaternion.Euler(new Vector3(0f, -90f, 0f));
-
-        }
-       
-       
-   }
-
-   public void OnTriggerStay(Collider other)
-   {
-
-        if(other.CompareTag("ElonMusk"))
-        {
             isTrigger = true;
+
             if(timer > 3)
             {
-                other.transform.position = ElonMusk.transform.position;
+                other.transform.position = SuzumeInit.transform.position;
                 isTrigger = false;
                 timer = 0;
           
@@ -59,12 +73,13 @@ public class returnbook : MonoBehaviour
 
         }
 
-         if(other.CompareTag("Suzume"))
+        if(other.CompareTag("Pachinko"))
         {
             isTrigger = true;
+
             if(timer > 3)
             {
-                other.transform.position = Suzume.transform.position;
+                other.transform.position = PachinkoInit.transform.position;
                 isTrigger = false;
                 timer = 0;
           
@@ -74,6 +89,42 @@ public class returnbook : MonoBehaviour
            
 
         }
+
+        if(other.CompareTag("Dollar"))
+        {
+            isTrigger = true;
+
+            if(timer > 3)
+            {
+                other.transform.position = DollarInit.transform.position;
+                isTrigger = false;
+                timer = 0;
+          
+               
+            }
+           
+           
+
+        }
+
+        if(other.CompareTag("Justice"))
+        {
+            isTrigger = true;
+
+            if(timer > 3)
+            {
+                other.transform.position = JusticeInit.transform.position;
+                isTrigger = false;
+                timer = 0;
+          
+               
+            }
+           
+           
+
+        }
+
+
 
 
 
