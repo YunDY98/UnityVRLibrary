@@ -13,8 +13,7 @@ public class OpenDoor : MonoBehaviour
 
    // public Transform targetPosition;
    // public Transform destinationPosition;
-
-
+  
     void Start()
     {
         

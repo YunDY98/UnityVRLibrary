@@ -13,6 +13,12 @@ public class SetMap : MonoBehaviour
        
     }
 
+    void Awake()
+    {
+        DeepSeaScene.SetActive(false);
+        ForestScene.SetActive(false);
+    }
+
 
     public void OnDeepSea()
     {
