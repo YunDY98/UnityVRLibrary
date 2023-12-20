@@ -12,6 +12,6 @@ public class OffScene : MonoBehaviour
     }
     public void OnTriggerEnter()
     {
-       Scene.SetActive(true);
+       Scene.SetActive(false);
     }
 }
