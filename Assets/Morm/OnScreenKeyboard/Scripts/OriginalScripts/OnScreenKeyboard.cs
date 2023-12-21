@@ -499,7 +499,64 @@ public class OnScreenKeyboard : MonoBehaviour
     {
         GameObject targetObject = GameObject.Find(str);
 
-        targetObject.transform.position = bookdeliverypostion.transform.position;
+        //
+
+         if(str == "20231")
+        {
+            ClearAllStrValue();
+            Recommend1.gameObject.SetActive(true);
+            Recommend2.gameObject.SetActive(false);
+            Recommend3.gameObject.SetActive(false);
+            Recommend4.gameObject.SetActive(false);
+            Recommend5.gameObject.SetActive(false);
+            
+            return;
+        }
+        else if(str == "20222")
+        { 
+            ClearAllStrValue();
+            Recommend1.gameObject.SetActive(false);
+            Recommend2.gameObject.SetActive(true);
+            Recommend3.gameObject.SetActive(false);
+            Recommend4.gameObject.SetActive(false);
+            Recommend5.gameObject.SetActive(false);
+            return;
+        }
+        else if(str == "20221")
+        {
+            ClearAllStrValue();
+            Recommend1.gameObject.SetActive(false);
+            Recommend2.gameObject.SetActive(false);
+            Recommend3.gameObject.SetActive(true);
+            Recommend4.gameObject.SetActive(false);
+            Recommend5.gameObject.SetActive(false);
+            return;
+        }
+        else if(str =="20212")
+        {
+            ClearAllStrValue();
+            Recommend1.gameObject.SetActive(false);
+            Recommend2.gameObject.SetActive(false);
+            Recommend3.gameObject.SetActive(false);
+            Recommend4.gameObject.SetActive(true);
+            Recommend5.gameObject.SetActive(false);
+            return;
+        }
+        else if(str == "20211")
+        {
+            ClearAllStrValue();
+            Recommend1.gameObject.SetActive(false);
+            Recommend2.gameObject.SetActive(false);
+            Recommend3.gameObject.SetActive(false);
+            Recommend4.gameObject.SetActive(false);
+            Recommend5.gameObject.SetActive(true);
+            return;
+        }
+        else
+        {
+            targetObject.transform.position = bookdeliverypostion.transform.position;
+
+        }
 
     }
 
