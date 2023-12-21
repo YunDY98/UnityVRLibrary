@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DeepSea.unity
     guid: 37e0d42996f11451c975aba5fa42d8b3
+  - enabled: 0
+    path: Assets/Scenes/DemoScene.unity
+    guid: 37abdc10dfd20469e98612161e7d3990
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

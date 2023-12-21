@@ -8,12 +8,14 @@ public class HarryMove : MonoBehaviour
 
     public GameObject targetObject;
 
+    public Material setSkyBox;
     
 
     private float duration = 3f; // 이동하는 데 걸리는 시간
 
     void OnTriggerEnter(Collider other)
     {
+        RenderSettings.skybox = setSkyBox;
        MoveToTargetWithTween();
     }
     
