@@ -24,7 +24,7 @@ public class PlaceBook : MonoBehaviour
 
     public Transform SaynoInit;
 
-    public RectTransform MoodrectTranform;
+    public RectTransform MoodrectTransform;
 
     public Transform MoodInit;
 
@@ -150,8 +150,9 @@ public class PlaceBook : MonoBehaviour
         }
         if (other.CompareTag("Mood"))
         {
-            MoodLiferectTransform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
-            MoodLiferectTransform.position = MoodLifeInit.position;
+            
+            MoodrectTransform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            MoodrectTransform.position = MoodInit.position;
 
         }
         if (other.CompareTag("2023"))
@@ -186,7 +187,7 @@ public class PlaceBook : MonoBehaviour
         if (other.CompareTag("MoodLife"))
         {
             MoodLiferectTransform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
-            MoodLiferectTransform.position = MoodInit.position;
+            MoodLiferectTransform.position = MoodLifeInit.position;
 
 
         }
@@ -204,7 +205,7 @@ public class PlaceBook : MonoBehaviour
 
 
         }
-        if (other.CompareTag("Poerty"))
+        if (other.CompareTag("Poetry"))
         {
             PoertyrectTransform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
             PoertyrectTransform.position = PoertyInit.position;
