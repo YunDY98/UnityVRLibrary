@@ -9,7 +9,7 @@ public class PlaceBook : MonoBehaviour
     public Transform PachinkoInit;
     public RectTransform DollarrectTransform;
 
-    public Transform DollarreInit;
+    public Transform DollarInit;
     public RectTransform JusticerectTransform;
 
      public Transform JusticeInit;
@@ -48,7 +48,7 @@ public class PlaceBook : MonoBehaviour
         if(other.CompareTag("Dollar"))
         {
             DollarrectTransform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
-            DollarrectTransform.position = PachinkoInit.position;
+            DollarrectTransform.position = DollarInit.position;
 
 
         }

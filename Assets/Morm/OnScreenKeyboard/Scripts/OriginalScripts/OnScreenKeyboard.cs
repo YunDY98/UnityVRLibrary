@@ -23,6 +23,8 @@ public class OnScreenKeyboard : MonoBehaviour
     public TextMeshProUGUI Recommend3;
     public TextMeshProUGUI Recommend4;
     public TextMeshProUGUI Recommend5;
+
+    public Transform bookdeliverypostion;
     
 
     private OnScreenKeyboardInputfield currentOskInputfield;
@@ -71,7 +73,7 @@ public class OnScreenKeyboard : MonoBehaviour
         curCaps = Caps.Uncaps;
         ClearAllStrValue();
         CloseKeyboard();
-       textMeshProComponent.gameObject.SetActive(false);
+        textMeshProComponent.gameObject.SetActive(false);
     }
    
 
@@ -361,12 +363,13 @@ public class OnScreenKeyboard : MonoBehaviour
     private void checkString()
     {
         Debug.Log(str);
+
         // 객체 찾기
         GameObject targetObject = GameObject.Find(str);
         
         if(str == "20231")
         {
-             ClearAllStrValue();
+            ClearAllStrValue();
             Recommend1.gameObject.SetActive(true);
             Recommend2.gameObject.SetActive(false);
             Recommend3.gameObject.SetActive(false);
@@ -376,7 +379,8 @@ public class OnScreenKeyboard : MonoBehaviour
             return;
         }
         else if(str == "20222")
-        { ClearAllStrValue();
+        { 
+            ClearAllStrValue();
             Recommend1.gameObject.SetActive(false);
             Recommend2.gameObject.SetActive(true);
             Recommend3.gameObject.SetActive(false);
@@ -386,7 +390,7 @@ public class OnScreenKeyboard : MonoBehaviour
         }
         else if(str == "20221")
         {
-             ClearAllStrValue();
+            ClearAllStrValue();
             Recommend1.gameObject.SetActive(false);
             Recommend2.gameObject.SetActive(false);
             Recommend3.gameObject.SetActive(true);
@@ -396,7 +400,7 @@ public class OnScreenKeyboard : MonoBehaviour
         }
         else if(str =="20212")
         {
-             ClearAllStrValue();
+            ClearAllStrValue();
             Recommend1.gameObject.SetActive(false);
             Recommend2.gameObject.SetActive(false);
             Recommend3.gameObject.SetActive(false);
@@ -406,7 +410,7 @@ public class OnScreenKeyboard : MonoBehaviour
         }
         else if(str == "20211")
         {
-             ClearAllStrValue();
+            ClearAllStrValue();
             Recommend1.gameObject.SetActive(false);
             Recommend2.gameObject.SetActive(false);
             Recommend3.gameObject.SetActive(false);
@@ -489,6 +493,14 @@ public class OnScreenKeyboard : MonoBehaviour
 
         
       
+    }
+
+    public void BookDelivery()
+    {
+        GameObject targetObject = GameObject.Find(str);
+
+        targetObject.transform.position = bookdeliverypostion.transform.position;
+
     }
 
 }
